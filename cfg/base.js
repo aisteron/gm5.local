@@ -5,11 +5,42 @@ const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 
 module.exports = {
-  entry: { app: './src/js/index.js' },
+  entry: { 
+    app: './src/js/index.js',
+    sv: './src/js/sv/index.js'
+  },
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].[fullhash].js',
     clean: true
+  },
+
+  resolve: {
+    alias: {
+      svelte: path.dirname(require.resolve('svelte/package.json'))
+    },
+    extensions: ['.mjs', '.js', '.svelte'],
+    mainFields: ['svelte', 'browser', 'module', 'main']
+  },
+  module:{
+    rules:[
+      {
+        test: /\.svelte$/,
+        use: {
+          loader: 'svelte-loader',
+          options: {
+            //emitCss: true,
+            hotReload: true
+          }
+        }
+      },
+      {
+        test: /node_modules\/svelte\/.*\.mjs$/,
+        resolve: {
+          fullySpecified: false
+        }
+      }
+    ]
   },
 
   plugins: [

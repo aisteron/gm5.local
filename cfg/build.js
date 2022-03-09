@@ -39,7 +39,7 @@ const options = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `../dist/[name].[fullhash].css`,
+      filename: `[name].[fullhash].css`,
     }),
   ],
 };

@@ -1,8 +1,6 @@
-
+import {One} from './1.js'
 import '../sass/index.sass';
 
-//import '../pug/index.pug';
-//import '../pug/about.pug';
 
+One()
 
-console.log(`Hello Node.js!`);

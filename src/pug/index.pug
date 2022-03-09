@@ -1,0 +1,9 @@
+- var {opt} = htmlWebpackPlugin.options
+
+doctype html
+html
+    include ui/_head
+    body(class= opt.bodyClass+"-page")
+      .container
+        h1 Hello from Webpack
+        

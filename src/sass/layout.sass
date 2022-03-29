@@ -1,0 +1,197 @@
+
+header
+	border-bottom: 1px solid $pink
+	.wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 50px
+	nav
+		color: #717070
+		a
+			color: #717070
+			&:hover
+				color: $pink
+			&.active
+				color: $pink	
+		ul
+			display: flex
+			justify-content: space-between
+
+			>li
+				font-family: 'Russo One', sans-serif
+				margin-right: 30px
+				text-transform: uppercase
+				cursor: pointer
+				span
+					pointer-events: none
+				&.expand
+					.head
+						display: flex
+						align-items: center
+						justify-content: space-between
+						text-transform: uppercase
+						font-weight: 500
+						margin: 0 -1rem
+						padding: 0 1rem
+						&:hover
+							span
+								color: $pink	
+						img
+							margin-left: 5px
+							transition: rotate 0.3s ease-in-out
+					>ul
+						box-shadow: 0px 3px 6px rgba(212, 13, 126, 0.42)
+						background: #fff
+						width: 265px
+						li .head
+							padding-bottom: 10px
+					li
+						padding: 1rem
+						width: 100%
+						border-bottom: 1px solid $pink
+						line-height: 100%
+						&:hover
+							background: #f9e0ee33
+							color: #717070
+							ul
+								background: #f9e0ee33	
+					&.open
+						.head					
+							img
+								transform: rotate(0deg)
+						ul
+							display: block
+							position: absolute
+							top: 42px
+							z-index: 2
+							li
+								transform: rotate(0)
+								font-family: 'Roboto', sans-serif
+								text-transform: none
+								padding-bottom: 0
+								ul
+									display: none
+								&.open
+									border-bottom: 1px solid $pink
+									.head img
+										transform: rotate(180deg)
+
+									ul
+										display: block
+										position: relative
+										box-shadow: none
+										background: #f9e0ee57
+										margin: 0 -1rem
+										top: 0
+										li
+											border: none
+											line-height: 120%
+											padding: 0
+											font-size: 14px
+											&:hover
+												background: #f9e0ee
+											a
+												padding: 5px 1rem
+												display: inline-block
+												width: 100%
+												
+													
+
+
+				ul
+					display: none		
+	.soc
+		font-family: 'Russo One', sans-serif
+		display: flex
+		align-items: center
+		a
+			color: $pink
+			display: inline-block
+			margin-right: 1rem
+			&:last-of-type
+				margin-right: 0
+			&.tel
+				&:hover
+					text-decoration: underline
+
+				
+aside
+	width: 265px
+	h5
+		margin: 1rem 0
+		color: #717070
+		font-weight: 100
+		font-size: 14px
+	.online
+		h5
+			padding-left: 1rem
+		ul
+			border: 1px solid $pink
+			padding: 22px 18px
+			border-radius: 3px
+			li
+				margin-bottom: 20px
+				&:hover img
+					filter: invert(93%) sepia(7%) saturate(3581%) hue-rotate(17deg) brightness(93%) contrast(93%)
+				&:last-of-type
+					margin-bottom: 0
+				img
+					margin-right: 20px
+				a
+					font-size: 14px
+					color: $grey	
+					display: flex
+					align-items: center
+					&:hover
+						color: $pink
+								
+	.form
+		fieldset
+			width: 100%
+			margin: 0
+			border-radius: 3px
+			border: 1px solid $pink
+			padding: 22px 18px
+			padding-top: 27px
+			padding-bottom: 15px
+			legend
+				color: #717070
+				font-weight: 100
+				font-size: 14px
+				padding: 0 1rem
+			.row
+				position: relative
+				input[type="text"]
+					border: none
+					border-bottom: 1px solid $pink	
+					margin-bottom: 25px
+					&:focus ~ label, &:valid ~ label
+						top: -14px
+						font-size: 12px
+				label
+					position: absolute
+					top: -3px
+					left: 0
+					color: $grey
+					font-size: 14px
+					transition: all 0.1s ease-in-out
+			.checkboxes
+				margin-bottom: 24px
+				.group
+					margin-bottom: 7px
+					display: flex
+					align-items: center
+					input[type="checkbox"]
+						&:checked ~ label
+							color: $pink
+					label
+						padding-left: 10px
+						font-size: 13px
+						color: $grey
+						cursor: pointer
+						&:hover
+							color: $pink	
+
+
+								

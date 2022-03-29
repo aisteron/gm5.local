@@ -1,0 +1,35 @@
+aside
+	.online
+		h5 Онлайн-инструменты
+		ul
+			li
+				a(href="#")
+					img(src="/img/link_icon.svg" width="22" height="22")
+					span Edvibe
+			li
+				a(href="#")
+					img(src="/img/link_icon.svg" width="22" height="22")
+					span Miro
+			li
+				a(href="#")
+					img(src="/img/link_icon.svg" width="22" height="22")
+					span uchi.ru
+	.form.mt32
+		form
+			fieldset
+				legend Онлайн заявка на обучение
+				.row
+					input(type="text" required id="name")
+					label(for="name") Ваше имя
+				.row
+					input(type="text" required id="phone")
+					label(for="phone") Ваш номер телефона
+				.checkboxes
+					.group
+						input(type="checkbox" id="wa" name="soc")
+						label(for="wa") У меня есть WhatsApp
+					.group
+						input(type="checkbox" id="tg" name="soc")
+						label(for="tg") У меня есть Telegram
+				button.common(type="submit") Отправить		
+							

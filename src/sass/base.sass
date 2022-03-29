@@ -1,0 +1,80 @@
+
+$pink: #D40D7E
+$green: #BEDF48
+$grey: #717070
+
+
+@font-face 
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 400
+  font-display: block
+  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff')
+
+@font-face 
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 700
+  font-display: block
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), url('../fonts/roboto-v20-latin_cyrillic-700.woff') format('woff')
+
+@font-face 
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 500
+  font-display: block
+  src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'), url('../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff')
+
+@font-face 
+  font-family: 'Roboto Condensed'
+  font-style: normal
+  font-weight: 700
+  font-display: block
+  src: local('Roboto Condensed'), local('Roboto-Condensed'), url('../fonts/roboto-condensed-v24-latin_cyrillic-700.woff2') format('woff2'), url('../fonts/roboto-condensed-v24-latin_cyrillic-700.woff') format('woff')
+
+@font-face 
+  font-family: 'Russo One'
+  font-style: normal
+  font-weight: 400
+  font-display: block
+  src: local('Russo One'), local('Russo-One'), url('../fonts/RussoOne-Regular.ttf') format('ttf')
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+*:focus
+  outline: none 
+*, *:before, *:after
+  box-sizing: inherit
+body
+  font-family: 'Roboto', sans-serif
+  margin: 0
+  padding: 0
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+a
+  text-decoration: none
+.wrapper
+  width: 980px
+  margin: 0 auto
+button.common
+  background: #fff
+  border: 1px solid $pink
+  padding: 12px 30px
+  border-radius: 3px
+  color: $pink
+  font-size: 14px
+  transition: background 0.3s linear
+  cursor: pointer
+  &:hover
+    background: #ffc0cb85 
+.mb16
+  margin-bottom: 1rem
+.mt16
+  margin-top: 1rem
+.mb32
+  margin-bottom: 2rem
+.mt32
+  margin-top: 2rem           

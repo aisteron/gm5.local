@@ -4,7 +4,10 @@ doctype html
 html
     include ui/_head
     body(class= opt.bodyClass+"-page")
-      .container
-        h1 Hello from Webpack
-      #root  
-        
+      include ui/_header
+      .wrapper.index
+        include ui/_aside
+        section
+         include pages/index/content
+
+        include ui/_footer 

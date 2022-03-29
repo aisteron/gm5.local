@@ -1,0 +1,166 @@
+body.index-page
+	.wrapper.index
+		display: flex
+		//justify-content: space-between
+		section
+			margin-left: 1rem
+			ul.blog-posts
+				display: flex
+				justify-content: space-between
+				width: 700px
+				margin-top: 48px
+				li
+					border: 1px solid $green
+					border-radius: 3px
+					width: 223px
+					position: relative
+					transition: border-color 0.2s ease-in-out
+					&:hover
+						border-color: $pink
+						a
+							color: $pink
+					a
+						color: $grey
+						display: inline-block
+						font-size: 14px
+						padding: 10px
+						position: static
+						width: 100%
+						&:after
+							content: ""
+							width: 100%
+							height: 100%
+							position: absolute
+							display: block
+							top: 0
+							left: 0
+			.courses
+				display: flex
+				justify-content: space-between
+				width: 700px
+				.ge, .en
+					border-radius: 3px
+					border: 1px solid $green
+					width: 342px
+					padding: 26px 44px
+					h2
+						font-family: 'Russo One', sans-serif
+						font-size: 30px
+						margin: 0
+						color: $grey
+						letter-spacing: 1.5px
+						span
+							color: $pink
+				img.thumb
+					width: 48px
+					height: 48px
+					min-width: 48px
+					min-height: 48px
+					object-fit: cover
+					border-radius: 50%
+					margin-right: 25px
+				ul
+					margin-top: 37px
+					li
+						width: 225px
+						display: flex
+						justify-content: space-between
+						align-items: center
+						margin-bottom: 20px
+						&:last-of-type
+							margin-bottom: 0
+						a
+							color: $grey
+							font-size: 14px
+							&:hover
+								color: $pink					
+			.getting-started
+				width: 700px
+				border: 1px solid $green
+				border-radius: 3px
+				padding: 26px 44px
+				h2
+					font-family: 'Russo One', sans-serif
+					font-size: 30px
+					color: $pink
+					letter-spacing: 1.5px
+					margin-top: 0
+				p, ul
+					color: $grey
+					font-size: 14px
+				p
+					line-height: 140%	
+				ul
+					padding-left: 1rem
+					li
+						position: relative
+						line-height: 180%
+						&:before
+							content: "•"
+							position: absolute
+							left: -12px
+							top: 0
+							font-size: 20px
+							color: $pink
+				.bottom
+					display: flex
+					justify-content: space-between
+					position: relative
+					.scales
+						margin-top: 27px
+						img
+							display: block
+							margin: 0 auto
+						ul
+							li
+								line-height: 120%
+								&:first-of-type
+									margin-bottom: 15px
+									margin-top: 35px
+								&:before
+									content: ''
+								a
+									color: $pink
+									font-size: 14px
+									position: relative
+									&:hover
+										text-decoration: underline
+									&:after
+										content: url(../img/index/ex_link_icon.svg)
+										position: absolute
+										right: -20px
+										top: -2px
+					span.swiper-pagination-bullet-active
+						background: $pink
+					.swiper-pagination
+						bottom: -20px
+						width: auto	
+					.swiper
+						width: 395px
+						margin-right: -1rem
+						.swiper-slide
+							h3
+								font-family: 'Roboto Condensed', sans-serif
+								&.grey
+									color: $grey
+									font-size: 23px
+									margin-top: 0
+									margin-bottom: 10px
+								&.pink
+									color: $pink
+									font-size: 25px
+									margin-bottom: 0
+							p.h
+								color: $pink		
+							.dsc
+								p
+									text-indent: 1rem		
+							&.index
+								display: flex
+								justify-content: center
+								align-items: center
+								background: #ffc0cb2e
+								text-align: center
+								h3
+									margin: 0
+

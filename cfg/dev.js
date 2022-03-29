@@ -24,6 +24,13 @@ const options = {
         loader: 'pug-loader',
         exclude: /(node_modules|bower_components)/
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+         filename: 'fonts/[name][ext][query]'
+       }
+      } 
     ],
   },
 };

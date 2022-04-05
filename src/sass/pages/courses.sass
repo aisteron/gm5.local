@@ -1,0 +1,119 @@
+body.courses-page
+	.wrapper.courses
+		display: flex
+		justify-content: space-between
+	section
+		@media(max-width: 1000px)
+			margin: 0 1rem	
+	article
+		border: 1px solid $green
+		border-radius: 3px
+		padding: 23px 42px
+		width: 700px
+		@media(max-width: 1000px)
+			width: 100%
+			padding: 0
+			border: none
+		h1
+			font-family: 'Roboto Condensed', sans-serif
+			font-size: 30px
+			color: $pink
+			margin: 0
+			margin-bottom: 1rem
+				
+		p
+			color: $grey
+			font-size: 14px	
+
+	.list
+		width: 700px
+		@media(max-width: 1000px)
+			width: 100%
+		h2
+			font-family: 'Roboto Condensed', sans-serif
+			font-size: 30px
+			color: $pink
+			margin: 0
+			margin-bottom: 1rem
+			padding-left: 41px
+			@media(max-width: 600px)
+				padding-left: 0
+		.item
+			border: 1px solid $green
+			border-radius: 3px
+			padding: 23px 42px
+			margin-bottom: 1rem
+			padding-bottom: 1rem
+			h3
+				font-weight: 500
+				font-size: 22px
+				color: $pink
+				@media(max-width: 600px)
+					margin-left: -1rem
+			.row
+				display: flex
+				justify-content: space-between
+				align-items: center
+				font-size: 14px
+				width: 90%
+				margin-bottom: 1rem
+				@media(max-width: 600px)
+					flex-wrap: wrap
+					border-bottom: 1px solid $green
+					width: auto
+					margin: 0 -43px
+					padding: 1rem
+				.left
+					display: flex
+					align-items: center
+					min-width: 240px
+					img
+						margin-right: 1rem
+					span
+						color: $pink
+				.right
+					color: $grey
+					width: 50%
+					ul
+						padding-left: 10px
+						min-width: 242px
+						@media(max-width: 600px)
+							margin-top: 1rem
+						li
+							position: relative
+							line-height: 21px
+							&:after
+								content: "•"
+								position: absolute
+								left: -12px
+						&.price
+							li
+								display: flex
+								justify-content: space-between
+								span
+									&:nth-of-type(2)
+										color: $pink		
+		.actions
+			margin: 0 -42px
+			//width: 100%
+			display: flex
+			justify-content: flex-end
+			border-top: 1px solid $green
+			padding-top: 1rem
+			margin-top: 3rem
+			padding-right: 1rem
+			@media(max-width: 600px)
+				border: none
+				margin-top: 0
+			a.more
+				padding: 12px 30px
+				color: $grey
+				border: 1px solid $grey
+				border-radius: 3px
+				font-size: 14px
+				transition: background 0.3s linear
+				display: inline-block
+				margin-left: 1rem
+				&:hover
+					background: lighten($grey, 40%)
+

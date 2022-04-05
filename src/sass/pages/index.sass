@@ -1,20 +1,33 @@
 body.index-page
 	.wrapper.index
 		display: flex
-		//justify-content: space-between
 		section
 			margin-left: 1rem
+			@media(max-width: 1000px)
+				margin-right: 1rem
 			ul.blog-posts
 				display: flex
 				justify-content: space-between
-				width: 700px
+				flex-wrap: wrap
 				margin-top: 48px
+				@media(max-width: 1000px)
+					justify-content: flex-start
+					li
+						margin-bottom: 1rem
+						margin-right: 1rem
+				@media(max-width: 800px)		
+					margin-top: 1rem
 				li
 					border: 1px solid $green
 					border-radius: 3px
 					width: 223px
 					position: relative
 					transition: border-color 0.2s ease-in-out
+					img
+						border-top-left-radius: 4px	
+						border-top-right-radius: 4px
+						margin-left: -1px
+						margin-top: -1px
 					&:hover
 						border-color: $pink
 						a
@@ -34,15 +47,47 @@ body.index-page
 							display: block
 							top: 0
 							left: 0
+			.mobile-blog-posts
+				border-radius: 3px
+				border: 1px solid $green
+				padding: 26px 44px
+				width: 342px
+				h2
+					font-family: 'Russo One', sans-serif
+					font-size: 30px
+					margin: 0
+					margin-bottom: 20px
+					color: $pink
+					letter-spacing: 1.5px
+				ul
+					li
+						display: flex
+						align-items: center
+						margin-bottom: 20px
+						&:last-of-type
+							margin-bottom: 0
+						img
+							width: 48px
+							height: 48px
+							border-radius: 50%
+							object-fit: cover
+							margin-right: 1rem
+						a
+							color: $grey
+							font-size: 14px
+							&:hover
+								color: $pink	
 			.courses
 				display: flex
 				justify-content: space-between
-				width: 700px
+				flex-wrap: wrap
 				.ge, .en
 					border-radius: 3px
 					border: 1px solid $green
 					width: 342px
 					padding: 26px 44px
+					@media(max-width: 1000px)
+						margin-bottom: 1rem
 					h2
 						font-family: 'Russo One', sans-serif
 						font-size: 30px
@@ -74,11 +119,31 @@ body.index-page
 							font-size: 14px
 							&:hover
 								color: $pink					
+			.welcome
+				border-radius: 3px
+				border: 1px solid $green
+				padding: 40px
+				@media(max-width: 500px)
+					padding: 0
+					border: none
+				h2
+					font-family: 'Russo One', sans-serif
+					font-size: 30px
+					color: $pink
+					letter-spacing: 1.5px
+					margin-top: 0
+				p, ul
+					color: $grey
+					font-size: 14px
+				p
+					line-height: 140%	
 			.getting-started
-				width: 700px
+				//width: 700px
 				border: 1px solid $green
 				border-radius: 3px
 				padding: 26px 44px
+				@media(max-width: 530px)
+					padding: 2rem 1rem
 				h2
 					font-family: 'Russo One', sans-serif
 					font-size: 30px
@@ -106,6 +171,8 @@ body.index-page
 					display: flex
 					justify-content: space-between
 					position: relative
+					@media(max-width: 1000px)
+						flex-wrap: wrap
 					.scales
 						margin-top: 27px
 						img
@@ -138,6 +205,12 @@ body.index-page
 					.swiper
 						width: 395px
 						margin-right: -1rem
+						@media(max-width: 1000px)
+							margin-right: 0
+							margin-left: 0
+							margin-top: 1rem
+						@media(max-width: 500px)
+							width: 80vw	
 						.swiper-slide
 							h3
 								font-family: 'Roboto Condensed', sans-serif
@@ -163,4 +236,48 @@ body.index-page
 								text-align: center
 								h3
 									margin: 0
+			.carousel
+				position: relative
+				min-height: 500px
+				border: 1px solid $green
+				border-radius: 3px
+				padding: 26px 44px
+				h2
+					font-family: 'Russo One', sans-serif
+					font-size: 30px
+					color: $pink
+				.swiper
+					width: 240px
+					height: 320px
 
+				.swiper-slide
+					display: flex
+					align-items: center
+					justify-content: center
+					border-radius: 18px
+					font-size: 22px
+					font-weight: bold
+					color: #fff
+					.dsc
+						width: 70%
+						text-align: center
+					&:nth-child(1n)
+						background-color: $pink
+					&:nth-child(2n)
+						background-color: $green
+					&:nth-child(3n)
+						background-color: #1F27B4
+					&:nth-child(4n)
+						background-color: #5C8F1C
+					&:nth-child(5n)
+						background-color: rgb(118, 163, 12)
+					&:nth-child(6n)
+						background-color: rgb(180, 10, 47)
+					&:nth-child(7n)
+						background-color: rgb(35, 99, 19)
+					&:nth-child(8n)
+						background-color: rgb(0, 68, 255)
+					&:nth-child(9n)
+						background-color: rgb(218, 12, 218)
+					&:nth-child(10n)
+						background-color: rgb(54, 94, 77)	

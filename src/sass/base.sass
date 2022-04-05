@@ -37,7 +37,8 @@ $grey: #717070
   font-style: normal
   font-weight: 400
   font-display: block
-  src: local('Russo One'), local('Russo-One'), url('../fonts/RussoOne-Regular.ttf') format('ttf')
+  //src: local('Russo One'), local('Russo-One'), url('../fonts/RussoOne-Regular.ttf') format('ttf')
+  src: local('Russo One'), local('Russo-One'), url('../fonts/russo-one.woff2') format('woff2')
 
 html
   box-sizing: border-box
@@ -59,6 +60,8 @@ a
 .wrapper
   width: 980px
   margin: 0 auto
+  @media(max-width: 1000px)
+    width: 100%
 button.common
   background: #fff
   border: 1px solid $pink
@@ -78,3 +81,28 @@ button.common
   margin-bottom: 2rem
 .mt32
   margin-top: 2rem           
+
+nav.bread
+  margin: 1rem 0
+  @media(max-width: 500px)
+    ul
+      li
+        &:last-of-type
+          margin-top: 1rem
+  ul
+    li
+      display: inline-block
+      margin-right: 2rem
+      position: relative
+      color: $grey
+      a
+        color: $grey
+        &:hover
+          color: $pink
+      &:after
+        content: "/"
+        position: absolute
+        right: -20px
+      &:last-of-type
+        &:after
+          content: ""  

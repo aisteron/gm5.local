@@ -11,6 +11,25 @@ const options = {
     compress: true,
     port: 9001,
     hot: true,
+    host: '0.0.0.0',
+    proxy: {
+      '/api/receive/form':{
+        bypass:(req, res)=> res.send(
+        {
+          status: 0,
+          success: true
+        }
+        )
+      },
+      '/api/receive/form2':{
+        bypass:(req, res)=> res.send(
+        {
+          status: 0,
+          success: true
+        }
+        )
+      }
+    }
   },
 
   module: {

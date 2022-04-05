@@ -6,6 +6,18 @@ header
 		justify-content: space-between
 		align-items: center
 		height: 50px
+		.logo
+			img.hand
+				display: none
+		@media(max-width: 1000px)
+			padding: 0 1rem
+		@media(max-width: 500px)
+			.logo
+				img.full
+					display: none
+				img.hand
+					display: block	
+
 	nav
 		color: #717070
 		a
@@ -17,7 +29,12 @@ header
 		ul
 			display: flex
 			justify-content: space-between
-
+			@media(max-width: 800px)
+				margin-left: 1rem
+				>li
+					margin-right: 1rem !important
+			@media(max-width: 750px)
+				display: none
 			>li
 				font-family: 'Russo One', sans-serif
 				margin-right: 30px
@@ -114,10 +131,36 @@ header
 			&.tel
 				&:hover
 					text-decoration: underline
+	button.hamburger
+		padding: 0
+		display: none
+		@media(max-width: 750px)
+			display: inline-block
+		>*
+			pointer-events: none
+		.hamburger-box
+			width: 30px	
+		span.hamburger-inner
+			background: $pink
+			width: 30px
+			&:after, &:before
+				background: $pink
+				width: 30px
+		&.is-active
+			span.hamburger-inner
+				background: $pink
+				&:after, &:before
+					background: $pink			
+						
 
 				
 aside
 	width: 265px
+	min-width: 265px
+	@media(max-width: 1000px)
+		margin-left: 1rem
+	@media(max-width: 800px)	
+		display: none
 	h5
 		margin: 1rem 0
 		color: #717070
@@ -195,3 +238,200 @@ aside
 
 
 								
+footer
+	color: #E9E9E9
+	font-size: 13px
+	.wrapper
+		background: $grey
+		padding: 29px 32px
+		padding-left: 64px
+		padding-bottom: 12px
+		@media(max-width: 500px)
+			padding-left: 3rem
+	a
+		color: #E9E9E9
+		&:hover
+			color: $pink
+	.row
+		display: flex
+		@media(max-width: 700px)
+			flex-wrap: wrap
+		.col
+			&:nth-of-type(2)
+				margin: 0 90px
+				@media(max-width: 1000px)
+					margin: 0 1rem
+				@media(max-width: 550px)	
+					margin: 2rem 0
+					margin-left: -2rem
+			&:nth-of-type(3)
+				position: relative
+				@media(max-width: 550px)
+					margin-left: -2rem
+					a.dev
+						left: 200px !important
+				a.dev
+					position: absolute
+					bottom: 0
+					left: 23px
+				ul
+					padding-left: 33px	
+			.head
+				display: flex
+				align-items: center
+				text-transform: uppercase
+				font-size: 15px
+				font-family: 'Russo One', sans-serif
+				margin-bottom: 17px
+				img
+					padding-right: 11px
+
+			a.logo
+				display: block
+				margin-left: -2rem
+			span.dsc
+				display: block
+				line-height: 130%
+			a.tel
+				display: block
+				font-weight: bold
+				margin-bottom: 1rem
+			a.wa
+				display: inline-block
+				margin-right: 1rem
+			a.wa, a.tg
+				transition: filter 0.2s ease-in-out	
+			a.wa:hover, a.tg:hover
+				filter: invert(93%) sepia(7%) saturate(3581%) hue-rotate(17deg) brightness(93%) contrast(93%)	
+			ul
+				padding-left: 26px
+				line-height: 21px
+									
+	.mobile_menu_wrapper
+		background: #1111118c
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 50px
+		left: 0
+		opacity: 0
+		z-index: -1
+		&.open
+			opacity: 1
+			z-index: 1
+			transition: opacity 0.18s ease-in-out
+			ul.mobile_menu
+				left: 0
+		ul.mobile_menu
+			background: $pink
+			height: 100%
+			padding: 2rem 1rem
+			position: relative
+			left: -350px
+			width: 350px
+			transition: all 0.15s ease-in-out
+			li
+				font-family: "Russo One"
+				font-size: 15px
+				text-transform: uppercase
+				line-height: 30px
+				.head
+					display: flex
+					align-items: center
+					cursor: pointer
+					&:hover
+						img
+							filter: invert(20%) sepia(92%) saturate(5372%) hue-rotate(315deg) brightness(84%) contrast(99%)
+					img
+						margin-left: 1rem
+				&.open
+					.head
+						img
+							transform: rotate(180deg)
+					ul
+						display: block
+				ul
+					padding-left: 1rem
+					display: none
+					li
+						font-family: "Roboto"
+						font-size: 16px
+						font-weight: 500
+						text-transform: none
+						line-height: 30px
+						.head
+							img
+								transform: none !important
+						ul
+							display: none !important
+						&.open
+							ul
+								display: block !important
+							.head
+								img
+									transform: rotate(180deg) !important
+							li
+								font-size: 14px
+								font-weight: 100
+								line-height: 27px
+
+
+#popup_wrap
+	background: #1111115c
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100vh
+	z-index: -1
+	opacity: 0
+	transition: opacity 0.2s linear
+	&.open
+		z-index: 1
+		opacity: 1
+		#popup
+			top: 3rem
+	#popup
+		background: #111
+		width: 350px
+		padding: 1rem
+		margin: 0 auto
+		position: relative
+		top: -360px
+		transition: all 0.3s ease-in-out
+		span.close
+			position: absolute
+			top: 0
+			right: 2px
+			padding: 6px
+			cursor: pointer
+			&:hover
+				color: $pink
+		select
+			display: block
+			padding: 5px
+		input
+			padding: 5px
+			margin-bottom: 1rem
+
+		.group
+			position: relative
+			label
+				color: #111
+				position: absolute
+				left:	9px
+				top: 7px
+				transition: all 0.2s ease-in-out
+			input
+				border: 1px solid transparent
+				border-radius: 3px
+				&:focus
+					border-color: $pink
+				&:focus ~ label, &:valid ~ label
+					top: -15px
+					color: #fff
+					font-size: 12px
+				
+
+
+

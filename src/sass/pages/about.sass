@@ -1,0 +1,111 @@
+body.about-page
+	.wrapper.about
+		display: flex
+		@media(max-width: 1000px)
+			padding-right: 1rem
+		section
+			margin-left: 1rem
+			margin-bottom: 1rem
+			article
+				border: 1px solid $green
+				border-radius: 3px
+				padding: 23px 42px
+				@media(max-width: 450px)
+					border: none
+					padding: 0
+				h1
+					font-family: 'Roboto Condensed', sans-serif
+					font-size: 30px
+					color: $pink
+					margin: 0
+					margin-bottom: 1rem
+				p, ul
+					color: $grey
+					font-size: 14px
+				p
+					line-height: 140%
+				.owner
+					display: flex
+					justify-content: space-between
+					@media(max-width: 580px)
+						flex-wrap: wrap
+					img
+						margin: 1rem
+						margin-left: 0
+					.accent
+						color: $pink	
+			.certs
+				border: 1px solid $green
+				border-radius: 3px
+				padding: 23px 42px
+				background: #bedf4857
+				width: 700px
+				@media(max-width: 1000px)
+					width: 100%
+					ul
+						flex-wrap: wrap
+				@media(max-width: 800px)
+					width: 94vw
+					ul
+						flex-wrap: unset
+				@media(max-width: 500px)
+					padding: 2rem 1rem
+					width: 85vw		
+				h2
+					font-family: 'Roboto Condensed', sans-serif
+					font-size: 30px
+					color: #5C8F1C
+					margin: 0
+					margin-bottom: 1rem
+				ul
+					display: flex
+					overflow-x: scroll
+					padding-bottom: 1rem
+					li
+						margin-right: 1rem
+					&::-webkit-scrollbar-track
+						background-color: #bedf4857
+					&::-webkit-scrollbar
+						width: 5px
+						height: 5px
+						background-color: #F5F5F5
+					&::-webkit-scrollbar-thumb
+						background-color: $green
+			.testimonials, .gallery
+				width: 700px
+				border: 1px solid $green
+				border-radius: 3px
+				padding: 23px 42px
+				@media(max-width: 1000px)
+					width: 50vw
+				@media(max-width: 800px)
+					width: 94vw
+				@media(max-width: 500px)
+					padding: 2rem 1rem
+					width: 85vw
+				h2
+					font-family: 'Roboto Condensed', sans-serif
+					font-size: 30px
+					color: $pink
+					margin: 0
+					margin-bottom: 1rem
+				.swiper-pagination-bullet-active
+					background-color: $pink
+				.swiper-slide
+					background-color: #FBE7E7
+					p
+						color: $grey
+						font-size: 14px
+						&.name, &.date
+							padding-left: 1rem
+						&.date
+							margin-bottom: 0	
+						&.name
+							font-size: 1rem
+							font-weight: 500
+						&.text
+							margin-top: 0
+							padding: 1rem
+			.gallery
+				.swiper-slide
+					background-color: transparent	

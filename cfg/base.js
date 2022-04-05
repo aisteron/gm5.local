@@ -16,6 +16,7 @@ module.exports = {
   },
 
 
+
   plugins: [
     new CopyPlugin({ patterns: [{ from: 'src/img', to: 'img' }]}),
     new CopyPlugin({ patterns: [{ from: 'src/vendors', to: 'vendors' }]}),
@@ -23,13 +24,45 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pug/index.pug",
       filename: 'index.html',
-      opt: {title: "Index", bodyClass: "index"}
+      opt: {title: "Index", bodyClass: "index"},
+      options: {minify: false}
     }),
 
     new HtmlWebpackPlugin({
-      title: "about",
       template: "./src/pug/about.pug",
-      filename: "about.html"
+      filename: "about.html",
+      opt: {title: "About", bodyClass: "about"}
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/pug/blog.pug",
+      filename: "blog.html",
+      opt: {title: "Blog", bodyClass: "blog"}
+    }),
+
+
+    new HtmlWebpackPlugin({
+      template: "./src/pug/post.pug",
+      filename: "post.html",
+      opt: {title: "Post", bodyClass: "post"}
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/pug/courses.pug",
+      filename: "courses.html",
+      opt: {title: "Courses", bodyClass: "courses"}
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/pug/course.pug",
+      filename: "course.html",
+      opt: {title: "Course", bodyClass: "course"}
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/pug/contacts.pug",
+      filename: "contacts.html",
+      opt: {title: "Contacts", bodyClass: "contacts"}
     }),
 
     new LiveReloadPlugin({

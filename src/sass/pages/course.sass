@@ -1,0 +1,84 @@
+body.course-page
+	.wrapper.course
+		display: flex
+		justify-content: space-between
+	section
+		@media(max-width: 1000px)
+			margin: 0 1rem	
+	article
+		border: 1px solid $green
+		border-radius: 3px
+		padding: 23px 42px
+		width: 700px
+		@media(max-width: 1000px)
+			width: 100%
+			padding: 1rem
+			//border: none
+		h1
+			font-family: 'Roboto Condensed', sans-serif
+			font-size: 30px
+			color: $pink
+			margin: 0
+			margin-bottom: 2rem
+		.actions
+			border-top: 1px solid $green
+			margin: 1rem -43px
+			padding: 1rem 43px
+			margin-bottom: 0
+			padding-bottom: 0
+			display: flex
+			justify-content: flex-end
+			@media(max-width: 1000px)
+				padding: 1rem
+				margin: 1rem -1rem
+				margin-bottom: 0
+				padding-bottom: 0
+		.list
+			width: 90%
+			font-size: 14px
+			@media(max-width: 620px)
+				width: 100%
+			.row
+				display: flex
+				align-items: center
+				margin-bottom: 1rem
+				@media(max-width: 620px)
+					flex-wrap: wrap
+					margin: 1rem -1rem
+					padding: 1rem 1rem
+					&:nth-of-type(2n+1)
+						background: #d40d7e0a
+				.right
+					color: $grey
+					ul
+						padding-left: 13px
+						@media(max-width: 620px)
+							margin-top: 1rem
+						li
+							line-height: 21px
+							position: relative
+							display: flex
+							justify-content: space-between
+							span
+								&:first-of-type
+									display: inline-block
+									margin-right: 2rem
+									min-width: 160px
+								&.pink
+									color: $pink
+							&:before
+								content: '•'
+								position: absolute
+								top: 2px
+								left: -14px
+								font-size: 18px
+								color: $pink
+				.left
+					color: $pink
+					display: flex
+					align-items: center
+					min-width: 240px
+					@media(max-width: 930px)
+						min-width: 200px
+					img
+						margin-right: 1rem

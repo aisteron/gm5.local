@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const options = {
   mode: 'production',
+  
   module: {
     rules: [
       {
@@ -18,7 +19,10 @@ const options = {
       {
         test: /\.pug$/,
         loader: 'pug-loader',
-        exclude: /(node_modules|bower_components)/
+        exclude: /(node_modules|bower_components)/,
+        options: {
+          pretty: true,
+        }
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,

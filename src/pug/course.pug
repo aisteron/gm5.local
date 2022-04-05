@@ -1,0 +1,15 @@
+- var {opt} = htmlWebpackPlugin.options
+
+doctype html
+html
+		include ui/_head
+		body(class= opt.bodyClass+"-page")
+			include ui/_header
+			.wrapper.course
+				include ui/_aside
+				section
+					include pages/course/_bread
+					include pages/course/content
+					
+
+			include ui/_footer 

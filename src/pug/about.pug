@@ -1,1 +1,14 @@
-p About 1
+- var {opt} = htmlWebpackPlugin.options
+
+doctype html
+html
+		include ui/_head
+		body(class= opt.bodyClass+"-page")
+			include ui/_header
+			.wrapper.about
+				include ui/_aside
+				section
+					include pages/about/_bread
+					include pages/about/content
+
+			include ui/_footer 

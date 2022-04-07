@@ -12,7 +12,7 @@ const options = {
     port: 9001,
     hot: true,
     host: '0.0.0.0',
-    proxy: {
+/*    proxy: {
       '/api/receive/form':{
         bypass:(req, res)=> res.send(
         {
@@ -29,7 +29,7 @@ const options = {
         }
         )
       }
-    }
+    }*/
   },
 
   module: {
@@ -47,7 +47,7 @@ const options = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-         filename: 'fonts/[name][ext][query]'
+         filename: 'assets/fonts/[name][ext][query]'
        }
       } 
     ],

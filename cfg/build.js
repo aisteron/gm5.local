@@ -28,14 +28,14 @@ const options = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-         filename: 'img/[name][ext][query]'
+         filename: 'assets/img/[name][ext][query]'
        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-         filename: 'fonts/[name][ext][query]'
+         filename: 'assets/fonts/[name][ext][query]'
        }
       },
     ],
@@ -43,7 +43,7 @@ const options = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `[name].[fullhash].css`,
+      filename: `assets/css/[name].[fullhash].css`,
     }),
   ],
 };

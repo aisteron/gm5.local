@@ -11,14 +11,14 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '[name].[fullhash].js',
+    filename: 'assets/js/[name].[fullhash].js',
     clean: true
   },
 
 
 
   plugins: [
-    new CopyPlugin({ patterns: [{ from: 'src/img', to: 'img' }]}),
+    new CopyPlugin({ patterns: [{ from: 'src/img', to: 'assets/img' }]}),
     new CopyPlugin({ patterns: [{ from: 'src/vendors', to: 'vendors' }]}),
 
     new HtmlWebpackPlugin({

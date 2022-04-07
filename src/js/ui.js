@@ -130,7 +130,7 @@ function mobile_menu_dropdown() {
 
 
 function popup_courses(){
-	if(!$_('#popup_wrap')) return
+	if(!$_('#popup_wrap') || !$_('.item button.common')) return
 	
 	$$_('.item button.common').forEach(el => {
 		
@@ -174,7 +174,7 @@ function popup_courses(){
 
 function popup_course(){
 
-	if(!$_('#popup_wrap')) return
+	if(!$_('#popup_wrap') || !$_('article button.common')) return
 	
 
 		

@@ -176,20 +176,23 @@ function popup_course(){
 
 	if(!$_('#popup_wrap') || !$_('article button.common')) return
 	
-
 		
-		$_('article button.common').addEventListener('click', event => {
+		
+		$$_('article button.common').forEach(el => {
+
+
+			el.addEventListener('click', event => {
+			
+				let title = $_('h1').innerText
+				
+				$_('#popup_wrap').style.display = "block"
+				
+				setTimeout(_=> $_('#popup_wrap').classList.add('open'), 100)
+
+				$_('#popup input[disabled]').value = title
 
 			
-			let title = $_('h1').innerText
-			
-			$_('#popup_wrap').style.display = "block"
-			
-			setTimeout(_=> $_('#popup_wrap').classList.add('open'), 100)
-
-			$_('#popup input[disabled]').value = title
-
-			
+			})
 		})
 
 
